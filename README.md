@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="icon128.png" alt="Gemini & Antigravity Bridge Logo" width="128" height="128">
+</p>
+
 # Gemini & Antigravity Bridge 🚀
 
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-4285F4?logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/intro/)
