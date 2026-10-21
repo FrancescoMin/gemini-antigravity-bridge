@@ -1,0 +1,138 @@
+/* Base button styles */
+.antigravity-bridge-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid rgba(128, 128, 128, 0.35);
+  border-radius: 20px;
+  padding: 6px 14px;
+  margin: 0 8px;
+  width: auto !important;
+  max-width: fit-content !important;
+  min-width: 0 !important;
+  flex: 0 0 auto !important;
+  align-self: center !important;
+  box-sizing: border-box !important;
+  white-space: nowrap !important;
+
+  font-family: 'Google Sans', 'Google Sans Text', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  line-height: 20px;
+
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  vertical-align: middle;
+}
+
+.antigravity-bridge-btn:hover {
+  background-color: rgba(128, 128, 128, 0.15);
+  border-color: rgba(128, 128, 128, 0.6);
+}
+
+.antigravity-bridge-btn:active {
+  background-color: rgba(128, 128, 128, 0.25);
+}
+
+.antigravity-bridge-btn:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.antigravity-bridge-btn svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.antigravity-bridge-btn .antigravity-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Fallback floating pill for Antigravity (safely offset to the left of the feedback icon) */
+.antigravity-bridge-float,
+#gemini-back-btn.antigravity-bridge-float {
+  position: fixed !important;
+  top: 6px !important;
+  right: 80px !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  z-index: 999999 !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  min-width: 0 !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box !important;
+  background-color: rgba(24, 24, 27, 0.9) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.antigravity-bridge-float:hover,
+#gemini-back-btn.antigravity-bridge-float:hover {
+  background-color: rgba(39, 39, 42, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Specific styling for Gemini button when positioned in Antigravity header */
+#gemini-back-btn {
+  height: 28px !important;
+  padding: 0 10px !important;
+  margin: 0 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #e3e3e3 !important;
+  flex: 0 0 auto !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  min-width: 0 !important;
+  align-self: center !important;
+  box-sizing: border-box !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  position: fixed !important;
+  z-index: 999999 !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease !important;
+}
+
+#gemini-back-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #ffffff !important;
+}
+
+#gemini-back-btn:active {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+#gemini-back-btn svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* Cleanly hide the native "Download app" button */
+button:has(mat-icon[data-mat-icon-name*="download"]),
+button:has(mat-icon[fonticon*="download"]),
+button[jslog*="370078"] {
+  display: none !important;
+}

@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini & Antigravity Bridge",
+  "version": "1.0.0",
+  "description": "Seamlessly switch between the Gemini web app and your remote Antigravity session.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://gemini.google.com/*",
+    "https://antigravity.google.com/*",
+    "https://*.usercontent.goog/*",
+    "https://*.google.com/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gemini.google.com/*",
+        "https://antigravity.google.com/*",
+        "https://*.usercontent.goog/*",
+        "https://*.google.com/*",
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "all_frames": true,
+      "match_about_blank": true,
+      "match_origin_as_fallback": true,
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["antigravity-logo.png"],
+      "matches": [
+        "https://gemini.google.com/*",
+        "https://antigravity.google.com/*",
+        "https://*.usercontent.goog/*",
+        "https://*.google.com/*",
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

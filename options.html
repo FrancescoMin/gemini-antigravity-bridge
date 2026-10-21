@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Antigravity Bridge Settings</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 16px; width: 340px; margin: 0; }
+    label { display: block; font-weight: 600; font-size: 13px; margin-bottom: 6px; }
+    input[type="url"] { width: 100%; box-sizing: border-box; padding: 8px; font-size: 13px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 6px; }
+    .hint { font-size: 11px; color: #5f6368; margin-bottom: 12px; line-height: 1.3; }
+    button { background: #1a73e8; color: white; border: none; padding: 8px 16px; font-size: 13px; font-weight: 500; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #1557b0; }
+    #status { margin-top: 10px; font-size: 12px; color: #137333; min-height: 16px; }
+  </style>
+</head>
+<body>
+  <label for="endpoint">Antigravity Endpoint / Session URL:</label>
+  <input type="url" id="endpoint" placeholder="https://antigravity.google.com">
+  <div class="hint">Default: <code>https://antigravity.google.com</code> (also supports <code>http://localhost/*</code> and <code>http://127.0.0.1/*</code>).</div>
+  <button id="save">Save</button>
+  <div id="status"></div>
+  <script src="options.js"></script>
+</body>
+</html>

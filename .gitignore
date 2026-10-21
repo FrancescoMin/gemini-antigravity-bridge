@@ -1,0 +1,20 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Extension Packaging & Bundles
+*.zip
+*.crx
+*.pem
+
+# Backups and temporary files
+backup-original/
+*.bak
+*.tmp
