@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Gemini & Antigravity Bridge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Seamlessly switch between the Gemini web app and your remote Antigravity session.",
   "permissions": ["storage"],
   "host_permissions": [
     "https://gemini.google.com/*",
     "https://antigravity.google.com/*",
+    "https://*.antigravity.google.com/*",
     "https://*.usercontent.goog/*",
-    "https://*.google.com/*",
     "http://localhost/*",
     "http://127.0.0.1/*"
   ],
@@ -17,8 +17,8 @@
       "matches": [
         "https://gemini.google.com/*",
         "https://antigravity.google.com/*",
+        "https://*.antigravity.google.com/*",
         "https://*.usercontent.goog/*",
-        "https://*.google.com/*",
         "http://localhost/*",
         "http://127.0.0.1/*"
       ],
@@ -40,8 +40,8 @@
       "matches": [
         "https://gemini.google.com/*",
         "https://antigravity.google.com/*",
+        "https://*.antigravity.google.com/*",
         "https://*.usercontent.goog/*",
-        "https://*.google.com/*",
         "http://localhost/*",
         "http://127.0.0.1/*"
       ]

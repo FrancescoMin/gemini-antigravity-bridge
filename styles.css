@@ -130,9 +130,12 @@
   height: 14px !important;
 }
 
-/* Cleanly hide the native "Download app" button */
-button:has(mat-icon[data-mat-icon-name*="download"]),
-button:has(mat-icon[fonticon*="download"]),
-button[jslog*="370078"] {
+/* Cleanly hide the native "Download app" button in Gemini */
+header button:has(mat-icon[data-mat-icon-name*="download"]),
+header button:has(mat-icon[fonticon*="download"]),
+header button[jslog*="370078"],
+.top-bar-actions button:has(mat-icon[data-mat-icon-name*="download"]),
+.top-bar-actions button:has(mat-icon[fonticon*="download"]),
+.top-bar-actions button[jslog*="370078"] {
   display: none !important;
 }

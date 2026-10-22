@@ -5,7 +5,7 @@
 # Gemini & Antigravity Bridge 🚀
 
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-4285F4?logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/intro/)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](manifest.json)
+[![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](manifest.json)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
 A sleek, lightweight Google Chrome extension (Manifest V3) that enables seamless, two-way switching between the **Google Gemini** web app (`gemini.google.com`) and your **Google Antigravity** session (`antigravity.google.com` or local/remote sessions).
