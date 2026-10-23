@@ -13,3 +13,13 @@ The product marks remain the property of Google. Their use identifies the
 navigation destination and does not imply affiliation or endorsement. They are
 third-party assets, not original artwork licensed under this repository's
 Apache-2.0 license.
+
+## README illustrations
+
+`assets/screenshots/gemini-view.png` and `antigravity-view.png` are browser captures
+of the static illustrative UI in `test/readme/index.html`. They preserve the two
+original empty-screen compositions and use the exact bundled official PNGs,
+without generating or redrawing the product marks. All visible content is
+synthetic, including the generic “Example project” label. No signed-in site,
+conversation, user avatar, device ID, or personal browser window is captured.
+The final PNG files have no embedded EXIF or ancillary metadata.

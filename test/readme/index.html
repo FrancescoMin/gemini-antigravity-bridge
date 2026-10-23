@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>README preview — synthetic empty workspace</title>
+<style>
+  *{box-sizing:border-box}html,body{margin:0;background:#101010;color:#dfe1e6;font-family:Arial,sans-serif;width:1024px;overflow:hidden}
+  button{font:inherit;color:inherit;cursor:default}svg{display:block;fill:none;stroke:currentColor;stroke-width:1.4}
+  .gemini{height:512px;position:relative;background:#101010}
+  .window-bar{height:18px;display:flex;align-items:center;gap:10px;padding:0 8px 0 5px;background:#092025;font:8px Georgia,serif;color:white}
+  .window-bar img{width:10px;height:10px}.window-bar .space{flex:1}.window-bar .window-control{width:21px;text-align:center}
+  .gemini-body{position:relative;height:494px;background:radial-gradient(ellipse 310px 185px at 52% 58%,#1b295e 0%,#101728 63%,#101010 100%)}
+  .rail{position:absolute;left:0;top:0;width:33px;height:100%;display:flex;align-items:center;flex-direction:column;gap:12px;padding-top:6px;color:#e1e4e8}
+  .rail img{width:16px;height:16px}.rail .round{width:23px;height:23px;display:grid;place-items:center;background:#242529;border-radius:50%}
+  .rail svg{width:10px;height:10px}.rail .bottom{margin-top:auto;display:flex;flex-direction:column;gap:17px;padding-bottom:8px}
+  .gemini-action{position:absolute;right:11px;top:8px;display:flex;gap:8px;align-items:center}
+  .gemini-action .attachment{border:0;background:none;font-size:15px;margin-right:9px;color:#aaa}
+  .pill{display:inline-flex;align-items:center;justify-content:center;gap:5px;height:22px;padding:0 8px;border:1px solid #393939;border-radius:13px;background:#171717;color:#e7e7e7;font-size:9px;white-space:nowrap}
+  .pill img{width:12px;height:12px;object-fit:contain}
+  .gemini h1{position:absolute;top:193px;left:0;width:100%;text-align:center;margin:0;font-size:21px;font-weight:400;letter-spacing:-.4px}
+  .gemini-composer{position:absolute;left:330px;top:244px;width:397px;height:40px;background:#202020;border-radius:23px;display:flex;align-items:center;gap:10px;padding:0 15px;font-size:9px;color:#ced0d4}
+  .gemini-composer .plus{font-size:20px;font-weight:300;color:#9ea0a6}.gemini-composer .input{flex:1}.gemini-composer .model{font-size:8px}.gemini-composer svg{width:11px;height:12px;margin-left:10px}
+  .antigravity{height:262px;position:relative;background:#101010;font-size:7px;color:#b6b6b6}
+  .ag-header{height:21px;display:flex;align-items:center;padding:0 4px 0 8px;gap:9px}
+  .ag-header .brand{color:#eee;font-size:7px}.ag-header svg{width:8px;height:8px}.ag-header .stretch{flex:1}
+  .ag-header .pill{height:15px;padding:0 5px;gap:3px;font-size:7px;background:#252525;border-color:#3a3a3a}
+  .ag-header .pill img{width:9px;height:9px}
+  .ag-workspace{position:absolute;left:335px;top:180px;width:378px}
+  .project{height:15px;display:flex;gap:4px;align-items:flex-start;padding-left:5px;color:#8c8e93;font-size:6.5px}.project svg{width:7px;height:7px}
+  .ag-composer{height:57px;border:1px solid #2a2a2a;border-radius:8px;background:#202020;overflow:hidden;color:#8d8e92}
+  .ag-input{height:22px;padding:8px 6px 0;font-size:7px}
+  .ag-controls{height:20px;display:flex;align-items:center;gap:8px;padding:0 7px;font-size:6px}.ag-controls .stretch{flex:1}.ag-controls .plus{font-size:9px}.ag-controls .send{border-radius:50%;width:13px;height:13px;background:#353535;display:grid;place-items:center;font-size:11px}.ag-controls svg{width:8px;height:8px}
+  .ag-footer{height:15px;background:#292929;padding:3px 7px;font-size:6px;display:flex;gap:4px;align-items:center}.ag-footer svg{width:7px;height:7px}
+</style>
+<body>
+<template id="gemini">
+  <section class="gemini" aria-label="Synthetic Gemini PWA example">
+    <div class="window-bar"><img src="../../gemini-logo.png" alt=""><span>‹</span><span>⟳</span><span>Gemini - Google Gemini</span><span class="space"></span><span>Disinstalla ▣</span><span>♧</span><span>⋮</span><span class="window-control">−</span><span class="window-control">□</span><span class="window-control">×</span></div>
+    <div class="gemini-body">
+      <nav class="rail" aria-label="Example sidebar">
+        <div class="round"><img src="../../gemini-logo.png" alt="Gemini"></div>
+        <svg viewBox="0 0 16 16"><path d="M10 3H4v9h9V6M8 8l6-6M11 2h3v3"/></svg>
+        <svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4"/><path d="m10 10 4 4"/></svg>
+        <svg viewBox="0 0 16 16"><rect x="2" y="2" width="4" height="4" rx="1"/><rect x="10" y="2" width="4" height="4" rx="1"/><rect x="2" y="10" width="4" height="4" rx="1"/><rect x="10" y="10" width="4" height="4" rx="1"/></svg>
+        <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M8 4v4l3 2"/></svg>
+        <svg viewBox="0 0 16 16"><path d="m1 6 7-3 7 3-7 3zM4 8v4l4 2 4-2V8"/></svg>
+        <div class="bottom"><svg viewBox="0 0 16 16"><path d="M3 4a6 6 0 1 1-1 6M1 2v4h4M8 4v4l3 1"/></svg><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3"/><path d="m5 2 3-1 3 1 1 3 3 3-3 3-1 3H5l-1-3-3-3 3-3z"/></svg></div>
+      </nav>
+      <div class="gemini-action"><button class="attachment" aria-label="Example attachment">♧</button><button class="pill"><img src="../../antigravity-logo.png" alt="">Antigravity</button></div>
+      <h1>Da dove iniziamo?</h1>
+      <div class="gemini-composer"><span class="plus">+</span><span class="input">Digita @ per connettori, skill e altro ancora</span><span class="model">Gemini⌄</span><svg viewBox="0 0 16 16"><rect x="5" y="1" width="6" height="9" rx="3"/><path d="M3 7v1a5 5 0 0 0 10 0V7M8 13v3"/></svg></div>
+    </div>
+  </section>
+</template>
+<template id="antigravity">
+  <section class="antigravity" aria-label="Synthetic Antigravity empty-workspace example">
+    <header class="ag-header"><span class="brand">Antigravity</span><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12"/><path d="M6 2v12"/></svg><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4"/><path d="m10 10 4 4"/></svg><span class="stretch"></span><button class="pill"><img src="../../gemini-logo.png" alt="">Gemini</button><svg viewBox="0 0 16 16"><path d="M2 2h12v9H7l-4 3v-3H2zM6 5h4M8 4v4"/></svg></header>
+    <div class="ag-workspace"><div class="project"><svg viewBox="0 0 16 16"><path d="M1 4h5l2 2h7v8H1z"/></svg>Example project⌄</div><div class="ag-composer"><div class="ag-input">Ask anything, @ to mention, / for actions</div><div class="ag-controls"><span class="plus">+</span><span>Gemini⌄</span><span class="stretch"></span><span>Auto⌄</span><svg viewBox="0 0 16 16"><rect x="5" y="1" width="6" height="9" rx="3"/><path d="M3 7v1a5 5 0 0 0 10 0V7M8 13v3"/></svg><span class="send">→</span></div><div class="ag-footer"><svg viewBox="0 0 16 16"><path d="M3 2h10v9H3zM1 14h14M8 11v3"/></svg>Local⌄</div></div></div>
+  </section>
+</template>
+<script>
+  const view = new URLSearchParams(location.search).get('view') === 'antigravity' ? 'antigravity' : 'gemini';
+  document.body.append(document.getElementById(view).content.cloneNode(true));
+</script>
+</body>
+</html>

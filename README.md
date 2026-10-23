@@ -70,17 +70,19 @@ The saved endpoint must be an HTTPS Antigravity URL (including its subdomains), 
 
 ## 📸 Screenshots
 
+The two examples below recreate the original empty-screen compositions with the official bundled product icons. They use only synthetic UI and a generic project name: no live account, avatar, conversation, or device identifiers are captured. These are illustrative views, not evidence of a connected remote session.
+
 ### 1. Injected Button in Google Gemini (PWA View)
 Jump directly into Google Antigravity from the Gemini top bar:
 
-![Gemini Header with Antigravity Button](assets/screenshots/gemini-view.png)
+![Illustrative empty Gemini PWA with the official Antigravity icon](assets/screenshots/gemini-view.png)
 
 ---
 
 ### 2. Injected Navigation Pill in Google Antigravity (PWA View)
 Return to Google Gemini with a single click from the Antigravity top header — anchored neatly to the side with zero overlap over any existing native buttons:
 
-![Antigravity Interface with Gemini Button](assets/screenshots/antigravity-view.png)
+![Illustrative empty Antigravity workspace with the official Gemini icon](assets/screenshots/antigravity-view.png)
 
 ---
 
@@ -166,6 +168,8 @@ npm test
 ```
 
 Node.js 22 and jsdom are used only for development tests; the installed extension has no npm runtime dependencies. Tests cover asset provenance, endpoint validation, toolbar reinsertion after SPA updates, cross-frame message checks, and modified/middle-click navigation. They do not establish that a live Google Remote Control session is connected. Reload the unpacked extension and its pages to test changes in a browser.
+
+The illustrative README views can be reproduced from `test/readme/index.html?view=gemini` (1024 × 512 CSS pixels) and `test/readme/index.html?view=antigravity` (1024 × 262 CSS pixels), served over localhost. They load the bundled official logos directly and contain no account data.
 
 For a local layout preview with dummy data, serve this directory with `python3 -m http.server 8769 --bind 127.0.0.1`, then open `http://127.0.0.1:8769/test/preview.html`. The preview executes the real content script in both the shell and workspace frame.
 
