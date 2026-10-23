@@ -1,18 +1,28 @@
-const DEFAULT_URL = 'https://antigravity.google.com';
-
 document.addEventListener('DOMContentLoaded', () => {
-  chrome.storage.sync.get({ antigravityUrl: DEFAULT_URL }, (data) => {
+  chrome.storage.sync.get({ antigravityUrl: BridgeConfig.DEFAULT_URL }, data => {
     document.getElementById('endpoint').value = data.antigravityUrl;
   });
 });
-
+let statusTimer;
 document.getElementById('save').addEventListener('click', () => {
-  const inputVal = document.getElementById('endpoint').value.trim();
-  const urlToSave = inputVal || DEFAULT_URL;
-
-  chrome.storage.sync.set({ antigravityUrl: urlToSave }, () => {
-    const status = document.getElementById('status');
+  const status = document.getElementById('status');
+  clearTimeout(statusTimer);
+  let antigravityUrl;
+  try {
+    antigravityUrl = BridgeConfig.endpoint(document.getElementById('endpoint').value);
+  } catch (error) {
+    status.style.color = '#b3261e';
+    status.textContent = error.message;
+    return;
+  }
+  chrome.storage.sync.set({ antigravityUrl }, () => {
+    if (chrome.runtime.lastError) {
+      status.style.color = '#b3261e';
+      status.textContent = chrome.runtime.lastError.message;
+      return;
+    }
+    status.style.color = '#137333';
     status.textContent = 'Settings saved.';
-    setTimeout(() => { status.textContent = ''; }, 2000);
+    statusTimer = setTimeout(() => { status.textContent = ''; }, 2000);
   });
 });

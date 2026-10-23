@@ -139,3 +139,14 @@ header button[jslog*="370078"],
 .top-bar-actions button[jslog*="370078"] {
   display: none !important;
 }
+
+/* A real flex item before More actions; the native controls keep their space. */
+#gemini-back-btn.antigravity-bridge-inline {
+  position: static !important;
+  margin: 0 4px 0 0 !important;
+  -webkit-app-region: no-drag;
+  app-region: no-drag;
+}
+@media (max-width: 600px) {
+  #gemini-back-btn.antigravity-bridge-inline span { display: none; }
+}

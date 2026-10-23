@@ -1,0 +1,7 @@
+{
+  "name": "gemini-antigravity-bridge",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": { "test": "node --test test/*.test.cjs" },
+  "devDependencies": { "jsdom": "26.1.0" }
+}
