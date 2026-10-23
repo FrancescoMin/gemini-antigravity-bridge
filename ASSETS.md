@@ -23,3 +23,9 @@ without generating or redrawing the product marks. All visible content is
 synthetic, including the generic “Example project” label. No signed-in site,
 conversation, user avatar, device ID, or personal browser window is captured.
 The final PNG files have no embedded EXIF or ancillary metadata.
+
+The temporary-chat symbol in the synthetic Gemini README view is the original
+`gemini_chat_temp` glyph from the Luminous Symbols font served by Google Fonts
+(`fonts.gstatic.com`) and referenced by Gemini's public interface. Its outline
+is embedded in the static fixture; no account content or font runtime request
+is included.
