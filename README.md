@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon128.png" alt="Gemini & Antigravity Bridge Logo" width="128" height="128">
+  <img src="antigravity-logo.png" alt="Gemini & Antigravity Bridge Logo" width="128" height="128">
 </p>
 
 # Gemini & Antigravity Bridge 🚀
@@ -49,7 +49,7 @@ This extension bridges that gap! By pairing this lightweight extension with Chro
   - **In Gemini**: Adds an *Antigravity* pill button in the top action bar right beside your user profile.
   - **In Antigravity**: Adds a sleek *Gemini* button anchored to the top action bar so there is zero overlap with existing controls:
     - **New Conversation Screen**: Positioned at the top-right side cleanly beside the native Feedback and Profile controls, creating perfect visual symmetry with the Gemini interface.
-    - **Active Conversation Workspace**: Dynamically tracks the chat toggle controls (Sidebar toggle, Panel toggle, and `⋮` More Actions menu) with zero obstruction, adapting fluidly in real time at 60 FPS as panels are resized.
+    - **Active Conversation Workspace**: Inserts the Gemini button into the native toolbar immediately before `⋮` More Actions, reserving its own space instead of overlaying controls. A measured fallback supports older/custom workspaces.
 - **Tab & Window Control**:
   - **Normal Click**: Smooth in-place navigation within the standalone PWA window or tab.
   - `Ctrl + Click` / `Cmd + Click` or `Middle-Click`: Opens the target in a new background/active browser tab.
@@ -60,22 +60,29 @@ This extension bridges that gap! By pairing this lightweight extension with Chro
 - **Privacy & Lightweight**:
   - Pure Vanilla JavaScript, zero dependencies, zero tracking/telemetry.
   - Manifest V3 compliant with minimal permissions (`storage`).
+    - Bundled official Google product icons; see [asset sources and checksums](ASSETS.md).
+    - Workspace access is limited to `antigravity.static.usercontent.goog` rather than every `*.usercontent.goog` site. Cross-frame layout messages are checked against the expected iframe window and origin.
+    - Toolbar updates follow DOM changes and resizing, without permanent 100/200 ms polling loops.
+
+The saved endpoint must be an HTTPS Antigravity URL (including its subdomains), or an HTTP localhost/127.0.0.1 URL with an optional port. Invalid stored values are also rejected when opening a session. The extension does not start Antigravity or preserve unsaved drafts when navigating in the same tab. A PWA may show its browser-controlled address bar when leaving Gemini's scope.
 
 ---
 
 ## 📸 Screenshots
 
+The Gemini view is a real high-resolution screenshot supplied by a contributor, showing the empty start screen and official product icons. The Antigravity view is an illustrative empty workspace with a generic project name. Neither image shows account details, personal avatars, chat history, or device identifiers. A start-screen image does not establish connection to a remote session.
+
 ### 1. Injected Button in Google Gemini (PWA View)
 Jump directly into Google Antigravity from the Gemini top bar:
 
-![Gemini Header with Antigravity Button](assets/screenshots/gemini-view.png)
+![Real Gemini start screen with the official Antigravity button](assets/screenshots/gemini-view.png)
 
 ---
 
 ### 2. Injected Navigation Pill in Google Antigravity (PWA View)
 Return to Google Gemini with a single click from the Antigravity top header — anchored neatly to the side with zero overlap over any existing native buttons:
 
-![Antigravity Interface with Gemini Button](assets/screenshots/antigravity-view.png)
+![Illustrative empty Antigravity workspace with the official Gemini icon](assets/screenshots/antigravity-view.png)
 
 ---
 
@@ -136,9 +143,9 @@ gemini-antigravity-bridge/
 ├── options.html                     # Options UI page
 ├── options.js                       # Storage handler for user preferences
 ├── antigravity-logo.png             # Antigravity button icon asset
-├── icon16.png                       # Extension icon (16x16)
-├── icon48.png                       # Extension icon (48x48)
-├── icon128.png                      # Extension icon (128x128)
+├── gemini-logo.png                  # Official Gemini return-button icon
+├── bridge-config.js                 # Shared endpoint validation
+├── ASSETS.md                        # Official asset sources and checksums
 ├── manifest.json                    # Extension manifest (v3)
 ├── .gitignore                       # Git ignore definitions
 ├── LICENSE                          # Apache 2.0 License
@@ -152,6 +159,21 @@ gemini-antigravity-bridge/
 This project is an independent open-source tool and is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Google LLC or Alphabet Inc.
 
 Google, Gemini, Chrome, and Antigravity are trademarks of Google LLC. All brand and product names are used solely for identification and interoperability purposes.
+
+## Development checks
+
+```sh
+npm ci --ignore-scripts
+npm test
+```
+
+Node.js 22 and jsdom are used only for development tests; the installed extension has no npm runtime dependencies. Tests cover asset provenance, endpoint validation, toolbar reinsertion after SPA updates, cross-frame message checks, and modified/middle-click navigation. They do not establish that a live Google Remote Control session is connected. Reload the unpacked extension and its pages to test changes in a browser.
+
+The illustrative Antigravity README view can be reproduced from `test/readme/index.html?view=antigravity` (1024 × 262 CSS pixels), served over localhost. The fixture also retains an optional synthetic Gemini example at `?view=gemini`; the README uses the supplied real 2549 × 1304 screenshot instead. The static examples load bundled official logos and contain no account data.
+
+For a local layout preview with dummy data, serve this directory with `python3 -m http.server 8769 --bind 127.0.0.1`, then open `http://127.0.0.1:8769/test/preview.html`. The preview executes the real content script in both the shell and workspace frame.
+
+![Local toolbar preview, not a live remote session](assets/screenshots/native-toolbar-preview.jpg)
 
 ---
 

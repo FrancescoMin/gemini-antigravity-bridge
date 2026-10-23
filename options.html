@@ -18,7 +18,8 @@
   <input type="url" id="endpoint" placeholder="https://antigravity.google.com">
   <div class="hint">Default: <code>https://antigravity.google.com</code> (also supports <code>http://localhost/*</code> and <code>http://127.0.0.1/*</code>).</div>
   <button id="save">Save</button>
-  <div id="status"></div>
+  <div id="status" role="status" aria-live="polite"></div>
+  <script src="bridge-config.js"></script>
   <script src="options.js"></script>
 </body>
 </html>

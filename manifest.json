@@ -8,7 +8,7 @@
     "https://gemini.google.com/*",
     "https://antigravity.google.com/*",
     "https://*.antigravity.google.com/*",
-    "https://*.usercontent.goog/*",
+    "https://antigravity.static.usercontent.goog/*",
     "http://localhost/*",
     "http://127.0.0.1/*"
   ],
@@ -18,15 +18,18 @@
         "https://gemini.google.com/*",
         "https://antigravity.google.com/*",
         "https://*.antigravity.google.com/*",
-        "https://*.usercontent.goog/*",
+        "https://antigravity.static.usercontent.goog/*",
         "http://localhost/*",
         "http://127.0.0.1/*"
       ],
       "all_frames": true,
-      "match_about_blank": true,
-      "match_origin_as_fallback": true,
-      "js": ["content.js"],
-      "css": ["styles.css"],
+      "js": [
+        "bridge-config.js",
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
       "run_at": "document_idle"
     }
   ],
@@ -36,20 +39,23 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["antigravity-logo.png"],
+      "resources": [
+        "antigravity-logo.png",
+        "gemini-logo.png"
+      ],
       "matches": [
         "https://gemini.google.com/*",
         "https://antigravity.google.com/*",
         "https://*.antigravity.google.com/*",
-        "https://*.usercontent.goog/*",
+        "https://antigravity.static.usercontent.goog/*",
         "http://localhost/*",
         "http://127.0.0.1/*"
       ]
     }
   ],
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "antigravity-logo.png",
+    "48": "antigravity-logo.png",
+    "128": "antigravity-logo.png"
   }
 }
