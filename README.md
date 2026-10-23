@@ -70,12 +70,12 @@ The saved endpoint must be an HTTPS Antigravity URL (including its subdomains), 
 
 ## 📸 Screenshots
 
-The two examples below recreate the original empty-screen compositions with the official bundled product icons. They use only synthetic UI and a generic project name: no live account, avatar, conversation, or device identifiers are captured. These are illustrative views, not evidence of a connected remote session.
+The Gemini view is a real high-resolution screenshot supplied by a contributor, showing the empty start screen and official product icons. The Antigravity view is an illustrative empty workspace with a generic project name. Neither image shows account details, personal avatars, chat history, or device identifiers. A start-screen image does not establish connection to a remote session.
 
 ### 1. Injected Button in Google Gemini (PWA View)
 Jump directly into Google Antigravity from the Gemini top bar:
 
-![Illustrative empty Gemini PWA with the official Antigravity icon](assets/screenshots/gemini-view.png)
+![Real Gemini start screen with the official Antigravity button](assets/screenshots/gemini-view.png)
 
 ---
 
@@ -169,7 +169,7 @@ npm test
 
 Node.js 22 and jsdom are used only for development tests; the installed extension has no npm runtime dependencies. Tests cover asset provenance, endpoint validation, toolbar reinsertion after SPA updates, cross-frame message checks, and modified/middle-click navigation. They do not establish that a live Google Remote Control session is connected. Reload the unpacked extension and its pages to test changes in a browser.
 
-The illustrative README views can be reproduced from `test/readme/index.html?view=gemini` (1024 × 512 CSS pixels) and `test/readme/index.html?view=antigravity` (1024 × 262 CSS pixels), served over localhost. They load the bundled official logos directly and contain no account data.
+The illustrative Antigravity README view can be reproduced from `test/readme/index.html?view=antigravity` (1024 × 262 CSS pixels), served over localhost. The fixture also retains an optional synthetic Gemini example at `?view=gemini`; the README uses the supplied real 2549 × 1304 screenshot instead. The static examples load bundled official logos and contain no account data.
 
 For a local layout preview with dummy data, serve this directory with `python3 -m http.server 8769 --bind 127.0.0.1`, then open `http://127.0.0.1:8769/test/preview.html`. The preview executes the real content script in both the shell and workspace frame.
 

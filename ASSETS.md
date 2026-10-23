@@ -14,18 +14,22 @@ navigation destination and does not imply affiliation or endorsement. They are
 third-party assets, not original artwork licensed under this repository's
 Apache-2.0 license.
 
-## README illustrations
+## README images
 
-`assets/screenshots/gemini-view.png` and `antigravity-view.png` are browser captures
-of the static illustrative UI in `test/readme/index.html`. They preserve the two
-original empty-screen compositions and use the exact bundled official PNGs,
-without generating or redrawing the product marks. All visible content is
-synthetic, including the generic “Example project” label. No signed-in site,
-conversation, user avatar, device ID, or personal browser window is captured.
-The final PNG files have no embedded EXIF or ancillary metadata.
+- `assets/screenshots/gemini-view.png` is a real screenshot supplied by a
+  contributor for this README. It is stored at its original 2549 × 1304
+  resolution with exactly the same decoded pixels. PNG metadata, including
+  software and creation-time fields, was removed without recompressing image
+  data. The visible empty start screen shows no account details, personal
+  avatar, chat history, or device identifiers.
+- `assets/screenshots/antigravity-view.png` is a browser capture of the static
+  illustrative UI in `test/readme/index.html?view=antigravity`. All content is
+  synthetic, including the generic “Example project” label. It uses the bundled
+  official product icon and contains no EXIF or ancillary metadata.
 
-The temporary-chat symbol in the synthetic Gemini README view is the original
-`gemini_chat_temp` glyph from the Luminous Symbols font served by Google Fonts
-(`fonts.gstatic.com`) and referenced by Gemini's public interface. Its outline
-is embedded in the static fixture; no account content or font runtime request
+The optional synthetic Gemini fixture is retained at `?view=gemini`, separately
+from the real screenshot used by the README. Its temporary-chat symbol is the
+original `gemini_chat_temp` glyph from the Luminous Symbols font served by Google
+Fonts (`fonts.gstatic.com`) and referenced by Gemini's public interface. Its
+outline is embedded in the fixture; no account content or font runtime request
 is included.
